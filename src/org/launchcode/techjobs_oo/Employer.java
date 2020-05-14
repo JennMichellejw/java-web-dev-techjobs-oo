@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Employer extends JobField {
 
-
+    // inherited constructor
     public Employer(String value) {
         super(value);
     }
@@ -19,9 +19,6 @@ public class Employer extends JobField {
         return getId() == employer.getId();
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId());
-    }
+
 }
 

@@ -18,9 +18,4 @@ public class Location extends JobField{
         return getId() == location.getId();
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId());
-    }
-
 }

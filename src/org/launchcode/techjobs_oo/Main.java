@@ -1,6 +1,5 @@
 package org.launchcode.techjobs_oo;
 
-import java.sql.ClientInfoStatus;
 import java.util.ArrayList;
 
 public class Main {

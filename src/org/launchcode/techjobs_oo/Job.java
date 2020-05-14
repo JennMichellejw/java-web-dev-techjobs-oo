@@ -79,7 +79,7 @@ public class Job {
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
 
-
+    //Getters and setters never used
     public String getName() { return name; }
 
     public void setName(String name) { this.name = name; }

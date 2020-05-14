@@ -38,11 +38,12 @@ public class JobTest {
 
     @Test
     public void testJobsForEquality(){
+        //test_job 4 is the same parameters as test_job3
         Job test_job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertNotEquals(test_job4, test_job3);
 
     }
-// toString Tests
+    // toString Tests
     @Test
     public void testToStringStartsAndEndsWithBlankLine(){
         assertTrue(test_job3.toString().substring(0,1).isBlank());
@@ -50,6 +51,8 @@ public class JobTest {
     }
 
     @Test
+    // test that each field has a label and is on a seperate line
+    // could this be one assert statement? does it test everything it should?
     public void testToStringContainsLabelAndDataForEachField(){
         assertTrue(test_job3.toString().contains("\nID: " + test_job3.getId()));
         assertTrue(test_job3.toString().contains("\nName: " + test_job3.getName()));
@@ -64,7 +67,6 @@ public class JobTest {
     public void testIfFieldEmptyPrintDataNotAvailable(){
 
         Job test_job5 = new Job("Product tester", new Employer("") , new Location(""), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-
         assertTrue(test_job5.toString().contains("\nEmployer: " + "Data not available"));
 
     }
